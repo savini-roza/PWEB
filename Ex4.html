@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Escolha uma opção</p>
+	<br/>
+	<button onclick="gamestart(1)">Pedra</button>
+	<button onclick="gamestart(2)">Papel</button>
+	<button onclick="gamestart(3)">Tesoura</button>
+
+	<p>Escolha do CPU: </p>
+	<p id="escolhacpu"></p>
+
+
+	<script type="text/javascript">
+		function gamestart(opt) {
+			cpuopt = Math.random() * 0.99;
+			
+			if (cpuopt <= 3.33) {
+				a = 1;
+				document.getElementById('escolhacpu').innerHTML = "Pedra";
+			}
+			else if (cpuopt > 3.33 && cpuopt <= 6.66) {
+				a = 2
+				document.getElementById('escolhacpu').innerHTML = "Papel";
+			}
+			else {
+				a = 3
+				document.getElementById('escolhacpu').innerHTML = "Tesoura";
+			}
+
+
+			if (opt == a) {
+				alert("Empate");
+			}
+			else if (opt == 1 && a == 2) {
+				alert("Perdeu. Papel embrulha Pedra");
+			}
+			else if (opt == 1 && a == 3) {
+				alert("Ganhou. Pedra quebra Tesoura");
+			}
+			else if (opt == 2 && a == 1) {
+				alert("Ganhou. Papel embrulha Pedra");
+			}
+			else if (opt == 2 && a == 3) {
+				alert("Perdeu. Tesoura corta Papel");
+			}
+			else if (opt == 3 && a == 1) {
+				alert("Perdeu. Pedra quebra Tesoura");
+			}
+			else if (opt == 3 && a == 2) {
+				alert("Ganhou. Tesoura corta Papel")
+			}
+		}
+	</script>
+</body>
+</html>
