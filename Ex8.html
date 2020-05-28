@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Abra a janela</p>
+	<img id="janela" onmouseover="abrir('janelaaberta.jpg');" onmouseout="fechar('janelafechada.jpg');" onclick="quebrar('janelaquebrada.jpg');" src="janelafechada.jpg" />
+
+	<script type="text/javascript">
+		function abrir(a) {
+			document.getElementById("janela").src = a;
+		}
+
+		function fechar(a) {
+			document.getElementById("janela").src = a;
+		}
+
+		function quebrar(a) {
+			document.getElementById("janela").src = a;
+		}
+	</script>
+</body>
+</html>
