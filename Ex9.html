@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="texto">
+	<input type="checkbox" onclick="maiusculo();" id="cb1">
+	<input type="checkbox" onclick="minusculo();" id="cb2">
+
+	<script type="text/javascript">
+		function maiusculo() {
+			var a = document.getElementById('texto').value;
+			b = a.toUpperCase();
+			document.getElementById('texto').value = b;
+		}
+
+		function minusculo() {
+			var a = document.getElementById('texto').value;
+			b = a.toLowerCase();
+			document.getElementById('texto').value = b;
+		}
+	</script>
+</body>
+</html>
